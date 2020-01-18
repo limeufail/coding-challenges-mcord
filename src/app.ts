@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { Router } from 'express';
 import { applyMiddleware } from "./utils";
+import middleware from "./middleware";
 import errorHandlers from "./middleware/errorHandlers";
 import routes from './routes/news-routes';
 
@@ -10,9 +11,10 @@ class App {
   constructor () {
     const router = Router();
     this.express = express();
-    this.mountRoutes();
-    this.handleErrors();
+    applyMiddleware(middleware, router);
     applyMiddleware(errorHandlers, router);
+    this.handleErrors();
+    this.mountRoutes();
   }
 
   private handleErrors() {
@@ -26,7 +28,7 @@ class App {
     });
   }
   private mountRoutes(): void {
-    this.express.use('/', routes);
+    this.express.use('/news', routes);
   }
 }
 
