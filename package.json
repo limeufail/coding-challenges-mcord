@@ -1,0 +1,22 @@
+{
+  "name": "moscord-cc-1",
+  "version": "1.0.0",
+  "description": "moscord coding challenge 1 & 4",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limeufail/moscord-coding-challenges.git"
+  },
+  "author": "hack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/limeufail/moscord-coding-challenges/issues"
+  },
+  "homepage": "https://github.com/limeufail/moscord-coding-challenges#readme",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
+}
