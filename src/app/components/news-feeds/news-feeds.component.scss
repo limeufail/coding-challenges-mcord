@@ -1,0 +1,11 @@
+.app-news-feeds {
+  .news-feeds-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    .news-card {
+      width: 25%;
+      margin: 30px;
+      box-sizing: border-box;
+    }
+  }
+}

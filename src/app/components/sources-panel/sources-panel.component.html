@@ -1,0 +1,7 @@
+<section class="app-sources-panel">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let source of newsSources$ | async">
+       <a matLine (click)="onClickSource(source.id)">{{ source.name }}</a>
+    </mat-list-item>
+  </mat-nav-list>
+</section>
