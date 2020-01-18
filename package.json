@@ -1,0 +1,32 @@
+{
+  "name": "moscord-news-feed",
+  "version": "1.0.0",
+  "description": "moscord coding challenge for news feed",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "prod": "tsc && node ./dist/app.js",
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limeufail/moscord-coding-challenges.git"
+  },
+  "author": "hack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/limeufail/moscord-coding-challenges/issues"
+  },
+  "homepage": "https://github.com/limeufail/moscord-coding-challenges#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.8",
+    "eslint": "^6.8.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.7.5"
+  }
+}
