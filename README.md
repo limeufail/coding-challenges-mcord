@@ -1,27 +1,24 @@
 # NewsFeedApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8 and uses Express 4.17.1.
 
-## Development server
+# DISCLAIMER
+All testing were done in localhost only (both client and server). Im currently busy in office so I have to to do this solution during weekends.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# How to install 
 
-## Code scaffolding
+1. clone this repo @ https://github.com/limeufail/moscord-coding-challenges/tree/newsfeed/server
+2. on your local execute the following;
+  - cd to your cloned repo
+  - npm i
+  - npm run dev (this will run on localhost port 4300)
+  - you can now test using postman. available endpoints below;
+    * http://localhost:4300/api/news/sources
+    * http://localhost:4300/api/news/2/techcrunch
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# FEATURES
+- This app connects to https://newsapi.org/ using Everything() method with category 'technology' and country 'US'.
+- This app supports pagination to be called on-demand in client side.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# NOTES
+- Im using Allow CORS: Access-Control-Allow-Origin (https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en) to bypass CORS policy in localhost
