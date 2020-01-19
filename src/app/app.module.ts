@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { MatListModule, MatCardModule, MatPaginatorModule } from '@angular/material';
+import {
+  MatListModule,
+  MatCardModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -23,7 +28,8 @@ import { NewsFeedsComponent } from './components/news-feeds/news-feeds.component
     HttpClientModule,
     MatListModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
