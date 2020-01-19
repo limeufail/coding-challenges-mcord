@@ -28,7 +28,7 @@ class App {
     });
   }
   private mountRoutes(): void {
-    this.express.use('/news', routes);
+    this.express.use('/api/news', routes);
   }
 }
 
