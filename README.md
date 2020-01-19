@@ -1,8 +1,16 @@
 These are moscord coding challenges solutions for 1 & 4. To run the following;
 
-* npm install
-to install the http-server
+# Installation
+ - clone the repo @https://github.com/limeufail/coding-challenges-mcord
+ - cd to your cloned repo
+ - npm install (this will also install http-server for local testing)
 
+# Testing
 * run http-server in console/cmd/terminal
-* you can now access http://localhost/index.html
+ - http-server -p 3000
+* you can now access http://localhost:3000/index.html
+
+# NOTES
+- All results can be seen in Chrome console.
+
 
