@@ -27,6 +27,7 @@ newsRoutes.get('/:page/:source', (req, res) => {
       to: process.env.DATE_TO,
       language: 'en',
       sortBy: 'relevancy',
+      pageSize: 10,
       page: page
     }
     
