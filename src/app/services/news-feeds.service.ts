@@ -9,7 +9,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class NewsFeedsService {
-  private baseUrl = environment.base_url;
+  private baseUrl = environment.base_url + '/api';
   private totalResults = new ReplaySubject<number>();
   readonly totalResults$ = this.totalResults.asObservable();
 

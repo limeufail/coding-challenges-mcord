@@ -8,7 +8,7 @@
         <p class="news-card_description">{{feed.description}}</p>
       </mat-card-content>
     </mat-card>
-    <div class="news-feeds-no-result">
+    <div class="news-feeds-no-result" *ngIf="!feeds.length">
       <h1>News Feed not found!</h1>
     </div>
   </div>

@@ -25,5 +25,36 @@
         ]
       }
     }
-  ]
+  ],
+  "dataGroups": [{
+    "name": "api-performance",
+    "urls": [
+      "/assets/**",
+      "/api/**"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "3d"
+    }
+  },
+  {
+    "name": "source-cache",
+    "urls": [ "/api/news/sources" ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 5,
+      "maxAge": "1d"
+    }
+  },
+  {
+    "name": "feeds-cache",
+    "urls": [ "/api/news/1/ars-technica" ],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": "1d",
+      "timeout": "10s"
+    }
+  }]
 }
