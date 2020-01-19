@@ -1,6 +1,9 @@
 <section class="app-news-feeds">
   <div class="news-feeds-wrap" *ngIf="newsFeeds$ | async as feeds; else spinner">
-    <mat-card class="news-card" *ngFor="let feed of feeds">
+    <mat-card
+      class="news-card"
+      color="primary"
+      *ngFor="let feed of feeds">
       <img mat-card-image class="news-card_image" [src]="feed.urlToImage">
       <mat-card-title class="news-card_title">{{feed.title}}</mat-card-title>
       <mat-card-content>
