@@ -9,4 +9,12 @@
       </mat-card-content>
     </mat-card>
   </div>
+  <div class="news-feed-pagination">
+    <mat-paginator
+      [length]="totalResults$ | async"
+      [pageSize]="pageSize"
+      [hidePageSize]=true
+      (page)="onPageChange($event)">
+</mat-paginator>
+  </div>
 </section>

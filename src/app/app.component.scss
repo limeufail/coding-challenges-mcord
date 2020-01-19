@@ -1,6 +1,10 @@
 .app-main {
   display: flex;
+  .news-deck {
+    flex: 1;
+  }
   .side-nav {
+    min-width: 230px;
     width: 20%;
     border: 1px #c4c4c4 solid;
   }
