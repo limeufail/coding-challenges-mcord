@@ -7,9 +7,10 @@ All testing were done in localhost only (both client and server). Im currently b
 
 # How to install 
 
-1. clone this repo @ https://github.com/limeufail/moscord-coding-challenges/tree/newsfeed/server
+1. clone this repo @ https://github.com/limeufail/coding-challenges-mcord
 2. on your local execute the following;
   - cd to your cloned repo
+  - git checkout newsfeed/server (to change to the correct branch)
   - npm i
   - npm run dev (this will run on localhost port 4300)
   - you can now test using postman. available endpoints below;
