@@ -1,0 +1,33 @@
+<section class="app-news-feeds">
+  <div class="news-feeds-wrap" *ngIf="newsFeeds$ | async as feeds; else spinner">
+    <mat-card
+      class="news-card"
+      color="primary"
+      *ngFor="let feed of feeds">
+      <img mat-card-image class="news-card_image" [src]="feed.urlToImage">
+      <mat-card-title class="news-card_title">{{feed.title}}</mat-card-title>
+      <mat-card-content>
+        <div class="news-card_published-date">{{feed.publishedAt}}</div>
+        <p class="news-card_description">{{feed.description}}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="news-feeds-no-result" *ngIf="!feeds.length">
+      <h1>News Feed not found!</h1>
+    </div>
+  </div>
+  <ng-template #spinner>
+    <div class="spinner-wrap">
+      <mat-progress-spinner
+        [color]="'primary'"
+        [mode]="'indeterminate'"></mat-progress-spinner>
+    </div>
+  </ng-template>
+  <div class="news-feed-pagination">
+    <mat-paginator
+      [length]="totalResults$ | async"
+      [pageSize]="pageSize"
+      [hidePageSize]=true
+      (page)="onPageChange($event)">
+</mat-paginator>
+  </div>
+</section>

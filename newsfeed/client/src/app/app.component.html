@@ -1,0 +1,14 @@
+<main class="app-main">
+  <nav class="side-nav">
+    <app-sources-panel
+      (sourcesPanelClick)="onSourceClick($event)"
+    ></app-sources-panel
+      >
+  </nav>
+  <div class="news-deck">
+    <app-news-feeds
+      [newsFeeds$]="newsFeeds$"
+      [totalResults$]="totalResults$"
+      (newsFeedsPageChange)="onPageChange($event)"></app-news-feeds>
+  </div>
+</main>
